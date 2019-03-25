@@ -21,5 +21,17 @@ class ProductControllerTest{
         assertNotNull("return should not be null ", products);
     }
 
+    @Test
+    fun getProuctByKnownId(){
+        val product = productController.getProductById("1");
+        assertNotNull("product should be found", product.body)
+    }
+
+    @Test
+    fun productShouldBeFound(){
+        val product = productController.getProductById("fakeId");
+        assertNull("product should be found", product.body)
+    }
+
 
 }

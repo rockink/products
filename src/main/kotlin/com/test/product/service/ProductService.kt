@@ -14,7 +14,17 @@ class ProductService(private val productRepository: ProductRepository){
     }
 
     fun getProductById(id: String): Optional<Product> {
+        if (!isValidId(id)) return Optional.empty();
         return productRepository.findById(id);
+    }
+
+    private fun isValidId(id: String): Boolean {
+        try{
+            id.toInt();
+            return true;
+        }catch (exception: Exception){
+            return false;
+        }
     }
 
 }
