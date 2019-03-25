@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class ProductController(val productService: ProductService){
+class ProductController(private val productService: ProductService){
 
     @GetMapping("/")
     fun getProducts(): ResponseEntity<List<Product>> {
-        val list = emptyList<Product>();
+        val list = productService.getProducts();
         return ok(list);
     }
 

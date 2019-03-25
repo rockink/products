@@ -1,7 +1,11 @@
 package com.test.product.domain
 
+import javax.persistence.Entity
+import javax.persistence.Id
+
+@Entity
 data class Product(
-        var id: String,
+        @Id var id: String,
         var name: String,
         var company: String,
         var productType: String,

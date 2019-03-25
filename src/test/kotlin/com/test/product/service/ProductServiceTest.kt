@@ -21,7 +21,7 @@ class ProductServiceTest{
 
     @Test
     fun getProductByUnknownId(){
-        val product = productService.getProductById(1);
-        assertNull("product Not Found", product);
+        val product = productService.getProductById(1.toString());
+        assertTrue("product Not Found", !product.isPresent);
     }
 }
