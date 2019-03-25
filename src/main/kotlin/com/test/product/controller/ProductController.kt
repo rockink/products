@@ -20,10 +20,10 @@ class ProductController(private val productService: ProductService){
     }
 
     @GetMapping("/{productId}")
-    fun getProductById(@PathVariable("productId") productId: String): ResponseEntity<Product> {
+    fun getProductById(@PathVariable("productId") productId: String): ResponseEntity<Any> {
         val product = (productService.getProductById(productId));
         if(product.isPresent) return ok(product.get())
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        return ResponseEntity.status(HttpStatus.OK).body(hashMapOf<Any, Any>());
     }
 
 }

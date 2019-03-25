@@ -31,8 +31,7 @@ class ProductControllerTest{
     @Test
     fun productShouldBeFound(){
         val product = productController.getProductById("fakeId");
-        assertNull("product should not be found", product.body)
-        assertEquals("product not found status is not maintained ",product.statusCode, HttpStatus.NOT_FOUND)
+        assertEquals("product should not be found", product.body, mapOf<Any, Any>())
     }
 
 
