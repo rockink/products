@@ -19,4 +19,9 @@ class ProductServiceTest{
         assertNotNull("return should not be null ", products);
     }
 
+    @Test
+    fun getProductByUnknownId(){
+        val product = productService.getProductById(1);
+        assertNull("product Not Found", product);
+    }
 }

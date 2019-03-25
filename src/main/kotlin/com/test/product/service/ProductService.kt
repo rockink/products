@@ -11,4 +11,8 @@ class ProductService{
         return emptyList<Product>()
     }
 
+    fun getProductById(id: Int): Product? {
+        return null;
+    }
+
 }
