@@ -17,4 +17,10 @@ data class Product(
         val storage: String,
         val gpu: String,
         val opSys: String
-);
+){
+
+    constructor() : this("","","","",0F,0F,
+            "","",0,"","","") {
+
+    }
+}

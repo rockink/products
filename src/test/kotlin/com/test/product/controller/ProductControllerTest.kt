@@ -5,6 +5,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.http.HttpStatus
 import org.springframework.test.context.junit4.SpringRunner
 
 @RunWith(SpringRunner::class)
@@ -30,7 +31,8 @@ class ProductControllerTest{
     @Test
     fun productShouldBeFound(){
         val product = productController.getProductById("fakeId");
-        assertNull("product should be found", product.body)
+        assertNull("product should not be found", product.body)
+        assertEquals("product not found status is not maintained ",product.statusCode, HttpStatus.NOT_FOUND)
     }
 
 
