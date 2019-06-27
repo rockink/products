@@ -1,4 +1,4 @@
-package com.test.product.domain
+package com.test.product.application.domain
 
 import javax.persistence.Entity
 import javax.persistence.Id

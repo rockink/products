@@ -1,4 +1,4 @@
-package com.test.product.service
+package com.test.product.application.service
 
 import org.junit.Assert.*
 import org.junit.Test

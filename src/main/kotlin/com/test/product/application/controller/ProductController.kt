@@ -1,14 +1,13 @@
-package com.test.product.controller
+package com.test.product.application.controller
 
-import com.test.product.domain.Product
-import com.test.product.service.ProductService
+import com.test.product.application.domain.Product
+import com.test.product.application.service.ProductService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.ResponseEntity.ok
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
-import java.util.*
 
 @RestController
 class ProductController(private val productService: ProductService){

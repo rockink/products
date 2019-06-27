@@ -1,6 +1,6 @@
-package com.test.product.repositories
+package com.test.product.application.repositories
 
-import com.test.product.domain.Product
+import com.test.product.application.domain.Product
 import java.io.File
 import java.util.*
 import java.util.logging.Logger
